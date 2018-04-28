@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomableScrollViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmz-pd-dTF">
+                                <rect key="frame" x="20" y="28" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="previousButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="plv-m6-iio"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCF-6J-wbL">
+                                <rect key="frame" x="323" y="28" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hg3-9v-rnd"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRc-aP-upP" customClass="ZoomableScrollView" customModule="ZoomableScrollView">
+                                <rect key="frame" x="0.0" y="101" width="375" height="566"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch, double tap, drag image to see the result!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9u-FZ-Z4t">
+                                <rect key="frame" x="20" y="70" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tmz-pd-dTF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ACh-7H-NYY"/>
+                            <constraint firstItem="LRc-aP-upP" firstAttribute="top" secondItem="V9u-FZ-Z4t" secondAttribute="bottom" constant="10" id="DJG-Sm-ZGi"/>
+                            <constraint firstItem="V9u-FZ-Z4t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="NaH-Mq-QYq"/>
+                            <constraint firstItem="Tmz-pd-dTF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OJn-Y7-C9S"/>
+                            <constraint firstAttribute="trailing" secondItem="V9u-FZ-Z4t" secondAttribute="trailing" constant="20" symbolic="YES" id="SWD-xs-Qyl"/>
+                            <constraint firstAttribute="trailing" secondItem="uCF-6J-wbL" secondAttribute="trailing" constant="20" symbolic="YES" id="Ui6-pr-r9u"/>
+                            <constraint firstItem="LRc-aP-upP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jBw-IG-24Y"/>
+                            <constraint firstAttribute="trailing" secondItem="LRc-aP-upP" secondAttribute="trailing" id="mFU-CT-doJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LRc-aP-upP" secondAttribute="bottom" id="n8j-f3-s12"/>
+                            <constraint firstItem="V9u-FZ-Z4t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="rGP-Y4-AED"/>
+                            <constraint firstItem="uCF-6J-wbL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="zWz-za-v2Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ZoomableScrollView" destination="LRc-aP-upP" id="xig-NX-aBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="313"/>
+        </scene>
+    </scenes>
+</document>
