@@ -23,7 +23,9 @@ This control help you display a view, with zoomable and scrollable features easi
 
 #### Cocoapod
 Add below line to Podfile or Run below command in Terminal to install(not support pod api yet):  
-`pod 'ZoomableScrollView', :git => 'https://github.com/tucan9389/ZoomableScrollView.git'`
+```
+pod 'ZoomableScrollView', :git => 'https://github.com/tucan9389/ZoomableScrollView.git'
+```
 
 #### Manual
 In iOS 7, you cannot use Cocoapod to install. In this case, you need add it manually. Simply, add file `ZoomableScrollView.swift` in folder `Sources` to your project
