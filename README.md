@@ -5,7 +5,7 @@
     <a href=""><img src="https://img.shields.io/badge/ios-8.0+-blue.svg"></a>
 </p>
 
-A control to help you display an view, with zoomable and scrollable features easily.
+A Simple Zoomable ScrollView with a View inherited from UIScrollView.
 
 ### DEMO
 ![DEMO](https://s3.amazonaws.com/tucan-images/ZoomableScrollViewDEMO002.gif)
@@ -17,21 +17,14 @@ This control help you display a view, with zoomable and scrollable features easi
 #### Compatible
 
 - iOS 7 and later (requires iOS 8 if you want to add it to project using CocoaPod)
-- Swift 3.0 (version 1.3), 2.0 (version 1.2 and prior)
+- Swift 4.0(version 1.5), Swift 3.0 (version 1.3), 2.0 (version 1.2 and prior)
 
 ### Usage
 
 #### Cocoapod
-Add below line to Podfile:  
-
-```
-pod 'ZoomableScrollView'
-```  
-and run below command in Terminal to install:  
-`pod install`
-
-Note: If above pod isn't working, try using below pod definition in Podfile:  
+Add below line to Podfile or Run below command in Terminal to install(not support pod api yet):  
 `pod 'ZoomableScrollView', :git => 'https://github.com/tucan9389/ZoomableScrollView.git'`
+
 #### Manual
 In iOS 7, you cannot use Cocoapod to install. In this case, you need add it manually. Simply, add file `ZoomableScrollView.swift` in folder `Sources` to your project
 
@@ -66,10 +59,14 @@ Note: If your view is aligned left instead of center, try calling below method:
 
 `superViewOfZoomableScrollView` is the view that ZoomableScrollView is added to.
 
-### About this source
-This open source is based on PhotoScroller demo avaiable on Apple's site. The original source is written in Objective C. This source rewrite uses Swift, and adds some new features:
-- Double tap to zoom feature.
+### Features
+- Simple to create zoomable scroll view
+- Double tap to zoom feature
 - Smoother. Fixed bug when zooming out, the control auto zooms from center, and not from the corner.
+- Various `ContentMode`
+
+### About this source
+This open source is based on PhotoScroller demo avaiable on Apple's site. The original source is written in Objective C. This source rewrite uses Swift, and adds some new features
 
 ### License
 ZoomableScrollView is released under the MIT license. See LICENSE for details. Copyright © tucan9389
