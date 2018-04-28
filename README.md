@@ -49,7 +49,7 @@ class ViewController: UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let myView = MyCustomView()
         zoomableScrollView.display(view: myView)
         // or
@@ -72,4 +72,4 @@ This open source is based on PhotoScroller demo avaiable on Apple's site. The or
 - Smoother. Fixed bug when zooming out, the control auto zooms from center, and not from the corner.
 
 ### License
-ZoomableScrollView is released under the MIT license. See LICENSE for details. Copyright © Nguyen Cong Huy, tucan9389
+ZoomableScrollView is released under the MIT license. See LICENSE for details. Copyright © tucan9389

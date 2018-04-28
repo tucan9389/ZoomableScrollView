@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  ZoomableScrollViewDemo
 //
-//  Created by Nguyen Cong Huy on 3/5/16.
-//  Copyright © 2016 Nguyen Cong Huy. All rights reserved.
+//  Created by tucan9389 on 4/29/18.
+//  Copyright © 2018 tucan9389. All rights reserved.
 //
 
 import UIKit
@@ -43,4 +43,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
