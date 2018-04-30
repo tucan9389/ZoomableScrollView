@@ -65,7 +65,7 @@ Note: If your view is aligned left instead of center, try calling below method:
 - Simple to create zoomable scroll view
 - Double tap to zoom feature
 - Smoother. Fixed bug when zooming out, the control auto zooms from center, and not from the corner.
-- Various `ContentMode`
+- Various `ZoomMode`(`.defaultFit`, `aspectFill`, `aspectFit`, `widthFill`, `heightFill`)
 
 ### About this source
 This open source is based on PhotoScroller demo avaiable on Apple's site. The original source is written in Objective C. This source rewrite uses Swift, and adds some new features
