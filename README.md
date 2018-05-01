@@ -41,15 +41,18 @@ import ZoomableScrollView
 class ViewController: UIViewController
 
     @IBOutlet weak var zoomableScrollView: ZoomableScrollView!
+    let myView = MyCustomView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        let myView = MyCustomView()
-        zoomableScrollView.display(view: myView)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        zoomableScrollView.display(view: myView)
         // or
-        let myImage = UIImage(named: "my_image_name")
-        zoomableScrollView.display(image: myImage)
+        zoomableScrollView.display(image: UIImage(named: "image"))
     }
 }
 ```

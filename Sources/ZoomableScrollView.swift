@@ -252,15 +252,17 @@ open class ZoomableScrollView: UIScrollView {
         }
 
 
-        let maxScale = maxScaleFromMinScale*minScale
-
+        var maxScale = maxScaleFromMinScale*minScale
+        maxScale = _maximumZoomScale ?? maxScale
+        minScale = _minimumZoomScale ?? minScale
+        
         // don't let minScale exceed maxScale. (If the content view is smaller than the screen, we don't want to force it to be zoomed.)
         if minScale > maxScale {
             minScale = maxScale
         }
 
-        super.maximumZoomScale = _maximumZoomScale ?? maxScale
-        super.minimumZoomScale = (_minimumZoomScale ?? minScale) * 0.999 // the multiply factor to prevent user cannot scroll page while they use this control in UIPageViewController
+        super.maximumZoomScale = maxScale
+        super.minimumZoomScale = minScale * 0.999 // the multiply factor to prevent user cannot scroll page while they use this control in UIPageViewController
     }
 
     // MARK: - Gesture

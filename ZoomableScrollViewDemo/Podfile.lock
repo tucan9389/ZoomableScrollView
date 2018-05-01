@@ -1,5 +1,5 @@
 PODS:
-  - ZoomableScrollView (1.5)
+  - ZoomableScrollView (1.0.0)
 
 DEPENDENCIES:
   - ZoomableScrollView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZoomableScrollView: 8da861c96879f9204406e4a5764352fb3628df84
+  ZoomableScrollView: 94514421b407aa4f92ee7019ff98e73216c49d6f
 
 PODFILE CHECKSUM: e70715e8df2d74dc7a4233417c8ebcb6ac9fea3e
 
