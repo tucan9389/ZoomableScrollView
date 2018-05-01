@@ -2,4 +2,4 @@ language: objective-c
 # xcode_project: ZoomableScrollViewDemo.xcodeproj # path to your xcodeproj folder
 # xcode_scheme: ZoomableScrollViewDemo
 podfile: ZoomableScrollViewDemo/Podfile
-script: xcodebuild -workspace ZoomableScrollViewDemo/ZoomableScrollViewDemo.xcworkspace -scheme -list -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+# script: xcodebuild -workspace ZoomableScrollViewDemo/ZoomableScrollViewDemo.xcworkspace -scheme -list -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
