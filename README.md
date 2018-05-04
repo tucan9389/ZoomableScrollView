@@ -1,3 +1,5 @@
+![DEMO](https://s3.amazonaws.com/tucan-images/ZoomableScrollViewDEMO002.gif)
+
 # ZoomableScrollView
 <p align="center">
     <a href=""><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
@@ -6,9 +8,6 @@
 </p>
 
 A Simple Zoomable ScrollView with a View inherited from UIScrollView.
-
-### DEMO
-![DEMO](https://s3.amazonaws.com/tucan-images/ZoomableScrollViewDEMO002.gif)
 
 ### About
 When you make an application, which has a viewer feature(like big photo viewer), the viewer usually needs to have zoomable and scrollable features, to allow the user to view more details.  
