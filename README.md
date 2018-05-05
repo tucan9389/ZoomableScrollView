@@ -42,10 +42,6 @@ class ViewController: UIViewController
     @IBOutlet weak var zoomableScrollView: ZoomableScrollView!
     let myView = MyCustomView()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
