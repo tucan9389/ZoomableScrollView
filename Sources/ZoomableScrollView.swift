@@ -274,9 +274,13 @@ open class ZoomableScrollView: UIScrollView {
         }
         else {
             let center = gestureRecognizer.location(in: gestureRecognizer.view)
-            let zoomRect = zoomRectForScale(ZoomableScrollView.kZoomInFactorFromMinWhenDoubleTap * minimumZoomScale, center: center)
-            zoom(to: zoomRect, animated: true)
+            zoom(to: center, with: ZoomableScrollView.kZoomInFactorFromMinWhenDoubleTap * minimumZoomScale)
         }
+    }
+    
+    fileprivate func zoom(to point: CGPoint, with scale: CGFloat) {
+        let zoomRect = zoomRectForScale(scale, center: point)
+        zoom(to: zoomRect, animated: true)
     }
 
     fileprivate func zoomRectForScale(_ scale: CGFloat, center: CGPoint) -> CGRect {
