@@ -279,24 +279,24 @@ open class ZoomableScrollView: UIScrollView {
     }
     
     fileprivate func zoom(to point: CGPoint, with scale: CGFloat) {
-        let zoomRect = zoomRectForScale(scale, center: point)
+        let zoomRect = zoomedRect(for: scale, with: frame.size, at: point)
         zoom(to: zoomRect, animated: true)
     }
 
-    fileprivate func zoomRectForScale(_ scale: CGFloat, center: CGPoint) -> CGRect {
-        var zoomRect = CGRect.zero
+    fileprivate func zoomedRect(for scale: CGFloat, with size: CGSize, at center: CGPoint) -> CGRect {
+        var zoomedRect = CGRect.zero
 
         // the zoom rect is in the content view's coordinates.
         // at a zoom scale of 1.0, it would be the size of the ZoomableScrollView's bounds.
         // as the zoom scale decreases, so more content is visible, the size of the rect grows.
-        zoomRect.size.height = frame.size.height / scale
-        zoomRect.size.width  = frame.size.width  / scale
+        zoomedRect.size.height = size.height / scale
+        zoomedRect.size.width  = size.width  / scale
 
         // choose an origin so as to get the right center.
-        zoomRect.origin.x    = center.x - (zoomRect.size.width  / 2.0)
-        zoomRect.origin.y    = center.y - (zoomRect.size.height / 2.0)
+        zoomedRect.origin.x    = center.x - (zoomedRect.size.width  / 2.0)
+        zoomedRect.origin.y    = center.y - (zoomedRect.size.height / 2.0)
 
-        return zoomRect
+        return zoomedRect
     }
 
     open func refresh() {
